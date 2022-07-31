@@ -7,12 +7,12 @@ const User=require('../models/user');
 
 //users router
 
-router.get('/register',(req,res)=>{
-    res.send("Register router")
+router.get('/',(req,res)=>{
+    res.send("User router")
 })
 
 //authenticate router 
-router.post('/authenticate',(req,res,next)=>{
+router.post('/Register',(req,res,next)=>{
     let newUser=new User({
         name:req.body.name,
         email:req.body.email,
@@ -31,12 +31,12 @@ router.post('/authenticate',(req,res,next)=>{
 
 //profile router
 router.get('/profile',(req,res)=>{
-    res.send("Register router")
+    res.send("profile router")
 })
 
 //validate router
 router.get('/validate',(req,res)=>{
-    res.send("Register router")
+    res.send("validate router")
 })
 
 //Register router
