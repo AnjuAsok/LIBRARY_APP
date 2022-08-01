@@ -1,5 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+import {RouterModule, Routes} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +17,10 @@ import { EditbookComponent } from './editbook/editbook.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 
+const appRoutes:Routes=[
+
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +31,16 @@ import { SignupComponent } from './signup/signup.component';
     AddbookComponent,
     EditbookComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+   // HttpClient,
+    HttpClientModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
